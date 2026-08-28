@@ -1,0 +1,137 @@
+/* ============================================
+   NEXORA — PROFILE PAGE STYLES
+   ============================================ */
+
+.profile-guest{
+  min-height: 70vh;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 14px;
+  text-align: center;
+  padding: calc(var(--nav-h) + 20px) 20px 60px;
+}
+.profile-guest h2{ font-family: var(--font-display); font-size: 26px; }
+.profile-guest p{ color: var(--text-dim); }
+.guest-actions{ display: flex; gap: 14px; margin-top: 10px; flex-wrap: wrap; justify-content: center; }
+
+.profile-page{
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: calc(var(--nav-h) + 56px) 40px 120px;
+}
+
+/* ---------- HERO ---------- */
+.profile-hero{
+  display: flex; align-items: center; gap: 22px;
+  flex-wrap: wrap;
+  padding-bottom: 36px;
+  border-bottom: 1px solid var(--border);
+}
+.profile-avatar{
+  width: 76px; height: 76px;
+  border-radius: 50%;
+  background: var(--gradient-aurora);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 600;
+  color: #fff;
+  flex-shrink: 0;
+}
+.profile-hero-info{ flex: 1; min-width: 200px; }
+.profile-hero-info h1{
+  font-family: var(--font-display);
+  font-size: clamp(24px, 3.4vw, 32px);
+  font-weight: 500;
+}
+.profile-hero-info p{
+  color: var(--text-dim);
+  font-size: 14px;
+  margin-top: 6px;
+}
+.logout-btn{ flex-shrink: 0; }
+
+/* ---------- STATS ---------- */
+.profile-stats{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 36px;
+}
+.stat-card{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.stat-value{
+  font-family: var(--font-mono);
+  font-size: 26px;
+  font-weight: 500;
+}
+.stat-label{
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+/* ---------- DETAILS ---------- */
+.profile-details{
+  margin-top: 40px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+}
+.profile-details h3{
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.detail-row{
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+.detail-row:last-of-type{ border-bottom: none; }
+.detail-label{ color: var(--text-faint); font-family: var(--font-mono); font-size: 12px; }
+.detail-value{ color: var(--text); text-align: right; }
+.detail-hint{
+  margin-top: 14px;
+  font-size: 11px;
+  color: var(--text-faint);
+}
+
+/* ---------- QUICK LINKS ---------- */
+.profile-links{
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.profile-link-card{
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 22px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  font-family: var(--font-display);
+  font-size: 15px;
+  transition: border-color .3s var(--ease), transform .3s var(--ease);
+}
+.profile-link-card:hover{ border-color: var(--border-strong); transform: translateY(-3px); }
+.profile-link-card svg{ color: var(--text-faint); transition: transform .3s var(--ease); }
+.profile-link-card:hover svg{ transform: translateX(4px); color: var(--violet); }
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px){
+  .profile-page{ padding: calc(var(--nav-h) + 30px) 20px 80px; }
+  .profile-stats{ grid-template-columns: repeat(2, 1fr); }
+  .profile-links{ grid-template-columns: 1fr; }
+}

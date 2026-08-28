@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register — NEXORA</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/auth.css">
+</head>
+<body class="auth-body">
+
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<a href="index.html" class="auth-logo">NEXORA</a>
+
+<div class="auth-screen">
+
+  <!-- LEFT VISUAL PANEL -->
+  <div class="auth-visual">
+    <div class="auth-orb"></div>
+    <div class="auth-visual-text">
+      <p class="eyebrow">JOIN NEXORA</p>
+      <h2>Step into the<br>next dimension.</h2>
+      <p class="auth-visual-sub">Create an account to save your cart, wishlist and orders across visits.</p>
+    </div>
+  </div>
+
+  <!-- RIGHT FORM PANEL -->
+  <div class="auth-form-panel">
+    <div class="auth-card">
+      <h1>Create Account</h1>
+      <p class="auth-sub">Already have an account? <a href="login.html">Login</a></p>
+
+      <form id="registerForm" novalidate>
+        <div class="field">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" placeholder="Jane Doe" required autocomplete="name">
+          <span class="field-error" id="fullNameError"></span>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email">
+          <span class="field-error" id="emailError"></span>
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <div class="password-wrap">
+            <input type="password" id="password" name="password" placeholder="At least 6 characters" required autocomplete="new-password">
+            <button type="button" class="toggle-password" data-target="password" aria-label="Show password">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+          </div>
+          <span class="field-error" id="passwordError"></span>
+        </div>
+
+        <div class="field">
+          <label for="confirmPassword">Confirm Password</label>
+          <div class="password-wrap">
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter password" required autocomplete="new-password">
+            <button type="button" class="toggle-password" data-target="confirmPassword" aria-label="Show password">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+          </div>
+          <span class="field-error" id="confirmPasswordError"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary auth-submit magnetic"><span>CREATE ACCOUNT</span></button>
+
+        <p class="auth-demo-note">Demo mode — accounts are stored in your browser only (localStorage), not on a real server.</p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/auth.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
